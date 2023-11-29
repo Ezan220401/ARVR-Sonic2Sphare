@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UTS AR/VR</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.5/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <!-- Sonic -->
+    <a-scene
+      mindar-image="imageTargetSrc: https://cdn.glitch.global/23e53550-de6a-402b-bfbf-66da788f3cbf/sonic.mind?v=1701220201421;"
+      vr-mode-ui="enabled:false"
+      device-orientation-permission-ui="enabled: false"
+    >
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <a-entity mindar-image-target="targetIndex:0">
+        <a-sphere
+          position="0 0 -20"
+          radius="0.25"
+          material="src: url(https://cdn.glitch.global/23e53550-de6a-402b-bfbf-66da788f3cbf/blue-narrow-texture?v=1700800635692)"
+          dynamic-body="mass: 1; restitution: 1"
+          animation__rotate="property: rotation; to: 360 0 0; loop: true; dur: 300"
+          animation__bounce="property: position; to: 0 1 0; dir: alternate; dur: 300; easing: easeInOutSine; loop: true"
+          animation__move="property: position; to: 0 0 0; dur: 2000; easing: linear; loop: true"
+  ></a-sphere>
+      </a-entity>
+    </a-scene>
+    
+    <!-- Knuckless -->
+    <a-scene
+      mindar-image="imageTargetSrc: https://cdn.glitch.global/23e53550-de6a-402b-bfbf-66da788f3cbf/knuckless.mind?v=1701220661269;"
+      vr-mode-ui="enabled:false"
+      device-orientation-permission-ui="enabled: false"
+    >
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <a-entity mindar-image-target="targetIndex:0">
+        <a-sphere
+          position="0 0 0"
+          radius="0.25"
+          material="src: url(https://cdn.glitch.global/23e53550-de6a-402b-bfbf-66da788f3cbf/Fotoram.io.jpg?v=1700821772457)"
+          dynamic-body="mass: 1; restitution: 1"
+          animation__rotate="property: rotation; to: 360 0 0; loop: true; dur: 300"
+          animation__bounce="property: position; to: 0 1 0; dir: alternate; dur: 300; easing: easeInOutSine; loop: true"
+        ></a-sphere>
+      </a-entity>
+    </a-scene>
+    
+    <!-- Tails -->
+    <a-scene
+      mindar-image="imageTargetSrc: https://cdn.glitch.global/23e53550-de6a-402b-bfbf-66da788f3cbf/tails.mind?v=1701220573028;"
+      vr-mode-ui="enabled:false"
+      device-orientation-permission-ui="enabled: false"
+    >
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <a-entity mindar-image-target="targetIndex:0">
+  <a-sphere
+    position="0 0 0"
+    radius="0.25"
+    material="src: url(https://cdn.glitch.global/23e53550-de6a-402b-bfbf-66da788f3cbf/yellow-texture.jpg?v=1701162026638)"
+    dynamic-body="mass: 1; restitution: 1"
+    animation__fly="property: position; to: 0 2 0; dir: alternate; dur: 4000; easing: easeInOutSine; loop: true"
+  ></a-sphere>
+  <a-box
+    position="0 0.3 0"
+    width="1"
+    height="0.09"
+    depth="0.07"
+    material="src: url(https://cdn.glitch.global/23e53550-de6a-402b-bfbf-66da788f3cbf/yellow-texture.jpg?v=1701162026638)"
+    dynamic-body="mass: 1; restitution: 1"
+    animation__rotate="property: rotation; to: 0 360 0; loop: true; dur: 2000"
+    animation__fly="property: position; to: 0 2.3 0; dir: alternate; dur: 4000; easing: easeInOutSine; loop: true"
+  ><a-entity>
+      <a-cone
+        position="-0.55 0 0"
+        rotation="0 0 90"
+        radius-bottom="0.05"
+        radius-top="0"
+        width="0.3"
+        height="0.5"
+        color="white"
+      ></a-cone>
+    <a-cone
+        position="0.55 0 0"
+        rotation="0 0 -90"
+        radius-bottom="0.05"
+        radius-top="0"
+        width="0.3"
+        height="0.5"
+        color="white"
+      ></a-cone>
+    </a-entity>
+        </a-box>
+</a-entity>
+
+    </a-scene>
+  </body>
+</html>
+
+<!-- Live site: https://screeching-perfect-marmoset.glitch.me -->
